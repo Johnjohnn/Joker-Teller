@@ -21,8 +21,11 @@ async function getJokes () {
     try {
      const response = await fetch(apiUrl);
      const data = await response.json();
-     console.log(data);
-    }catch(err) {
+     joke =  `${data.setup} ... ${data.delivery} `;
+    }else {
+        joke = data.joke=
+    }
+    catch(err) {
         // Catch errors 
         console.log("something is wrong !", err)
     }
